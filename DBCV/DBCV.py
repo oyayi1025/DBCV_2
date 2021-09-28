@@ -87,7 +87,7 @@ def _mutual_reachability_dist(point_i, point_j, neighbors_i,
     return mutual_reachability
 
 
-  def _mutual_reach_dist_graph(X, labels, dist_function):
+def _mutual_reach_dist_graph(X, labels, dist_function):
   
       neighs_lookup = _create_neighbours_lookup(X, labels)
   
@@ -110,7 +110,7 @@ def _mutual_reachability_dist(point_i, point_j, neighbors_i,
               graph[col][row] = dist
       return graph
   
-  def _create_neighbours_lookup(X, labels):
+def _create_neighbours_lookup(X, labels):
       lookup = {}
       for i in labels:
           if i not in lookup.keys():
